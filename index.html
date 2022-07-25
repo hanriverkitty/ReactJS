@@ -2,9 +2,16 @@
 
 
 <body>
-
+    <div id="root"></div>
 </body>
 <script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js">  </script>
 <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+<script>
+    const root = document.getElementById("root");
+    //React로 요소 생성
+    const span = React.createElement("span", { id: "sexy-span" }, "Hello I'm a span");
+    //ReactDOM으로 요소 보여줌
+    ReactDOM.render(span, root);
+</script>
 
 </html>
