@@ -9,9 +9,17 @@
 <script>
     const root = document.getElementById("root");
     //React로 요소 생성
-    const span = React.createElement("span", { id: "sexy-span" }, "Hello I'm a span");
+    const h3 = React.createElement("h3", {
+        onMouseEnter: () => console.log("mouse enter"),
+    }, "Hello I'm a h3");
     //ReactDOM으로 요소 보여줌
-    ReactDOM.render(span, root);
+    //ReactDOM.render(span, root);
+    const btn = React.createElement("button", {
+        onClick: () => console.log("i'm clicked"),
+    }, "Click me");
+    const div = React.createElement("div", null, [h3, btn])
+    ReactDOM.render(div, root);
+
 </script>
 
 </html>
