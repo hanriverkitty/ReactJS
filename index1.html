@@ -9,13 +9,17 @@
 <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 <script type="text/babel">
     const root = document.getElementById("root");
-    const Title = (<h3 id="title" onMouseEnter={() => console.log("mouse enter")} > Hello I'm a title</h3>);
-    const Button = <button style={{ backgroudColor: "tomato", }} onClick={() => console.log("i'm clicked")}>Click me</button>
+    //fuction return이랑 =()=>는 같다
+    function Title() {
+        return (<h3 id="title" onMouseEnter={() => console.log("mouse enter")} > Hello I'm a title</h3>);
+    }
+    const Button = () => (<button style={{ backgroudColor: "tomato", }} onClick={() => console.log("i'm clicked")}>Click me</button>);
 
-
-    //createElement에 두번째 인자는 property나 event 세번째 인자는 요소에 들어갈 애들
-    const div = React.createElement("div", null, [Title, Button])
-    ReactDOM.render(div, root);
+    //component의 첫글자는 무조건 대문자로 적어줘야한다 그렇지않으면 html로 인식한다
+    const Container = <div>
+        <Title /> <Button />
+    </div>
+    ReactDOM.render(Container, root);
 
 </script>
 
