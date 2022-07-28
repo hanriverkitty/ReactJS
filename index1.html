@@ -17,20 +17,25 @@
 
     //component의 첫글자는 무조건 대문자로 적어줘야한다 그렇지않으면 html로 인식한다
     //Container 안에 <Title/> <Button/>을 쓰면된다
-    let counter = 0;
-    function countUp() {
+    //let counter = 0;
+    /*function countUp() {
         counter = counter + 1;
         render();
     }
     function render() {
         ReactDOM.render(<Container />, root);
-    }
-    const Container = () => (<div>
+    }*/
+    function App() {
+        const data = React.useState();
+        return
+        (
+            <div>
 
-        <h3>Total clicks: {counter}</h3>
-        <button onClick={countUp}>Click me</button>
-    </div>);
-    ReactDOM.render(<Container />, root);
+                <h3>Total clicks: 0</h3>
+                <button>Click me</button>
+            </div>);
+    }
+    ReactDOM.render(<App />, root);
 
 </script>
 
